@@ -13,9 +13,7 @@ const getName = () => {
   greet(name);
 };
 
-const alfred = () => {
+export default () => {
   greet();
   getName();
 };
-
-export { alfred };
