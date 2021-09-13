@@ -5,4 +5,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 ### GitHub Actions workflow badge (linter status):
-![Node CI](https://github.com/mickrubashkin/frontend-project-lvl1/workflows/nodejs/badge.svg)
+[![Node CI](https://github.com/mickrubashkin/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/mickrubashkin/frontend-project-lvl1/actions)

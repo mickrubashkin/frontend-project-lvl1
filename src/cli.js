@@ -11,9 +11,10 @@ const greet = (name = null) => {
 const getName = () => {
   const name = readlineSync.question('May I have your name? ');
   greet(name);
+  return name;
 };
 
 export default () => {
   greet();
-  getName();
+  return getName();
 };
