@@ -6,7 +6,8 @@
 
 **TODO**: Add a brief project description.
 
-**TODO**: Add asciinemo demo
+### Demo
+[![asciicast](https://asciinema.org/a/7oCJol9yBE4SRp8YQL3OGqY6L.svg)](https://asciinema.org/a/7oCJol9yBE4SRp8YQL3OGqY6L)
 <!-- Запишите аскинему с примером установки пакета, запуска игры, победой и поражением игрока. Опубликуйте её в сервисе и добавьте ссылку в README.md. -->
 ## Installation
 ```bash
