@@ -5,6 +5,7 @@
 [![Eslint](https://github.com/mickrubashkin/frontend-project-lvl1/actions/workflows/eslint.yml/badge.svg)](https://github.com/mickrubashkin/frontend-project-lvl1/actions)
 
 **TODO**: Add a brief project description.
+
 **TODO**: Add asciinemo demo
 <!-- Запишите аскинему с примером установки пакета, запуска игры, победой и поражением игрока. Опубликуйте её в сервисе и добавьте ссылку в README.md. -->
 ## Installation
