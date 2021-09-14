@@ -9,20 +9,20 @@
 **TODO**: Add asciinemo demo
 <!-- Запишите аскинему с примером установки пакета, запуска игры, победой и поражением игрока. Опубликуйте её в сервисе и добавьте ссылку в README.md. -->
 ## Installation
-1. Clone this package locally via https (or ssh, or gh cli)
-```
+```bash
+# 1. Clone this package locally
+$ cd ~/path-to-dir
 $ git clone https://github.com/mickrubashkin/frontend-project-lvl1.git
+# Will download project files to ~/path-to-dir/frontend-project-lvl1/
+
+# 2. Go into the package's directory
+$ cd ~/path-to-dir/frontend-project-lvl1
+
+# 3. Install a project with a clean slate, and create a symlink
+$ make install # runs npm ci
+$ npm link # creates global links for the bins
 ```
-2. Navigate to the root directory of the cloned package
-```
-$ cd frontend-project-lvl1
-```
-3. Download and install package
-```
-$ make install
-$ npm link
-```
-## Games
+## Playing Games
 1. Odd or Even?
 ```
 $ brain-even
@@ -42,8 +42,3 @@ Your answer: no
 Correct!
 Congratulations, Sam!
 ```
-
-<!-- ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/mickrubashkin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/mickrubashkin/frontend-project-lvl1/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![eslint](https://github.com/mickrubashkin/frontend-project-lvl1/workflows/eslint/badge.svg)](https://github.com/mickrubashkin/frontend-project-lvl1/actions) -->
