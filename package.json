@@ -4,7 +4,8 @@
   "description": "Frontend project lv1, hexlet.io (https://ru.hexlet.io/pages/about)",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js"
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js"
   },
   "type": "module",
   "main": "index.js",
