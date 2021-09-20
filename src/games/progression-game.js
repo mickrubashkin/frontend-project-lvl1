@@ -12,7 +12,7 @@ export default () => {
     progression.push(next);
   }
 
-  const hiddenPosition = getRandomNumber(0, len);
+  const hiddenPosition = getRandomNumber(0, len - 1);
   const answer = progression[hiddenPosition];
 
   const hidden = [...progression];
