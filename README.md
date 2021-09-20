@@ -30,3 +30,6 @@ $ npm link # creates global links for the bins
 [![asciicast](https://asciinema.org/a/xSnFP4siV8kJWi5MJFKNoqEJw.svg)](https://asciinema.org/a/xSnFP4siV8kJWi5MJFKNoqEJw)
 ### Calculator
 [![asciicast](https://asciinema.org/a/HBtsAqZK5f15wPpfT7nGIjsbJ.svg)](https://asciinema.org/a/HBtsAqZK5f15wPpfT7nGIjsbJ)
+
+### Greatest Common Divisor
+[![asciicast](https://asciinema.org/a/5A7OwYTUL9yCqKHAEp9vrym8p.svg)](https://asciinema.org/a/5A7OwYTUL9yCqKHAEp9vrym8p)
