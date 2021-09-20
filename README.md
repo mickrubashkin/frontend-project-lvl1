@@ -33,3 +33,6 @@ $ npm link # creates global links for the bins
 
 ### Greatest Common Divisor
 [![asciicast](https://asciinema.org/a/5A7OwYTUL9yCqKHAEp9vrym8p.svg)](https://asciinema.org/a/5A7OwYTUL9yCqKHAEp9vrym8p)
+
+### Progression
+[![asciicast](https://asciinema.org/a/rVGs2kiuJMwmjwyVofu1J7AiF.svg)](https://asciinema.org/a/rVGs2kiuJMwmjwyVofu1J7AiF)

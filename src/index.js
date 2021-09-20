@@ -2,14 +2,16 @@ import getName from './cli.js';
 import even from './games/even-game.js';
 import calc from './games/calc-game.js';
 import gcd from './games/gcd-game.js';
+import progression from './games/progression-game.js';
 
 const ROUNDS = 3;
 const RULES = [
   'Answer "yes" if the number is even, otherwise answer "no".',
   'What is the result of the expression?',
   'Find the greatest common divisor of given numbers.',
+  'What number is missing in the progression?',
 ];
-const GAMES = [even, calc, gcd];
+const GAMES = [even, calc, gcd, progression];
 
 const checkGuess = (guess, answer) => guess.toString() === answer.toString();
 
@@ -45,5 +47,8 @@ const game = (gameIndex) => () => {
 const evenGame = game(0);
 const calcGame = game(1);
 const gcdGame = game(2);
+const progressionGame = game(3);
 
-export { evenGame, calcGame, gcdGame };
+export {
+  evenGame, calcGame, gcdGame, progressionGame,
+};
