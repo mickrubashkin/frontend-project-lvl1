@@ -23,8 +23,8 @@ $ npm link # creates global links for the bins
 1. [Even]() `brain-even` - *is odd or even?*
 2. [Calculator]() `brain-calc` - *calculate expressions*
 3. [GCD]() `brain-gcd` - *find greatest common divisor*
-4. [Prime]() `brain-prime` - *is prime?*
-5. [Progression]() `brain-progression` - *find missing number in the given progression*
+4. [Progression]() `brain-progression` - *find missing number in the given progression*
+5. [Prime]() `brain-prime` - *is prime?*
 
 ### Odd or Even?
 [![asciicast](https://asciinema.org/a/xSnFP4siV8kJWi5MJFKNoqEJw.svg)](https://asciinema.org/a/xSnFP4siV8kJWi5MJFKNoqEJw)
@@ -36,3 +36,6 @@ $ npm link # creates global links for the bins
 
 ### Progression
 [![asciicast](https://asciinema.org/a/rVGs2kiuJMwmjwyVofu1J7AiF.svg)](https://asciinema.org/a/rVGs2kiuJMwmjwyVofu1J7AiF)
+
+### Prime
+[![asciicast](https://asciinema.org/a/5jx0znv6eSj3jkHMm2fwcVlpV.svg)](https://asciinema.org/a/5jx0znv6eSj3jkHMm2fwcVlpV)

@@ -3,6 +3,7 @@ import even from './games/even-game.js';
 import calc from './games/calc-game.js';
 import gcd from './games/gcd-game.js';
 import progression from './games/progression-game.js';
+import prime from './games/prime-game.js';
 
 const ROUNDS = 3;
 const RULES = [
@@ -10,8 +11,9 @@ const RULES = [
   'What is the result of the expression?',
   'Find the greatest common divisor of given numbers.',
   'What number is missing in the progression?',
+  'Answer "yes" if given number is prime. Otherwise answer "no".',
 ];
-const GAMES = [even, calc, gcd, progression];
+const GAMES = [even, calc, gcd, progression, prime];
 
 const checkGuess = (guess, answer) => guess.toString() === answer.toString();
 
@@ -48,7 +50,8 @@ const evenGame = game(0);
 const calcGame = game(1);
 const gcdGame = game(2);
 const progressionGame = game(3);
+const primeGame = game(4);
 
 export {
-  evenGame, calcGame, gcdGame, progressionGame,
+  evenGame, calcGame, gcdGame, progressionGame, primeGame,
 };

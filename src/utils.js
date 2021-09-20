@@ -3,21 +3,8 @@ const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min)
 const isEven = (num) => num % 2 === 0;
 
 const gcd = (a, b) => {
+  // Euclidean algorithm
   // https://en.wikipedia.org/wiki/Greatest_common_divisor
-  // Euclidean algorithm,
-  // a variant in which the difference of the two numbers a and b
-  // is replaced by the remainder of the Euclidean division
-  // (also called division with remainder) of a by b.
-
-  // Denoting this remainder as a mod b,
-  // the algorithm replaces (a, b) by (b, a mod b) repeatedly until the pair is (d, 0),
-  // where d is the greatest common divisor.
-
-  // For example, to compute gcd(48, 18), the computation is as follows:
-  // (48, 18) ===> (18, 48 mod 18) = (18, 12)
-  //          ===> (12, 18 mod 12) = (12, 6)
-  //          ===> (6, 12 mod 6) = (6, 0)
-  // This gives gcd(48, 18) = 6.
 
   const small = Math.min(a, b);
   const big = Math.max(a, b);
@@ -29,4 +16,16 @@ const gcd = (a, b) => {
   return gcd(small, big % small);
 };
 
-export { getRandomNumber, isEven, gcd };
+const isPrime = (num) => {
+  const PRIMES_TO_101 = [
+    2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
+    31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+    73, 79, 83, 89, 97, 101,
+  ];
+
+  return PRIMES_TO_101.includes(num);
+};
+
+export {
+  getRandomNumber, isEven, gcd, isPrime,
+};
