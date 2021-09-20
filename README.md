@@ -5,13 +5,6 @@
 [![Eslint](https://github.com/mickrubashkin/frontend-project-lvl1/actions/workflows/eslint.yml/badge.svg)](https://github.com/mickrubashkin/frontend-project-lvl1/actions)
 
 ❗️**TODO**: Add a brief project description.
-
-### Demo
-
-❗️**TODO**: Change asciinemo (install only) and move it to the `Installation` section
-
-[![asciicast](https://asciinema.org/a/7oCJol9yBE4SRp8YQL3OGqY6L.svg)](https://asciinema.org/a/7oCJol9yBE4SRp8YQL3OGqY6L)
-<!-- Запишите аскинему с примером установки пакета, запуска игры, победой и поражением игрока. Опубликуйте её в сервисе и добавьте ссылку в README.md. -->
 ## Installation
 ```bash
 # 1. Clone this package locally
@@ -34,27 +27,6 @@ $ npm link # creates global links for the bins
 5. [Progression]() `brain-progression` - *find missing number in the given progression*
 
 ### Odd or Even?
-
-❗️**TODO**: Add asciinema demo for the brain-even
-```
-$ brain-even
-
-Welcome to the Brain Games!
-May I have your name? Sam
-Hello, Sam!
-Answer "yes" if the number is even, otherwise answer "no".
-Question: 15
-Your answer: no
-Correct!
-Question: 6
-Your answer: yes
-Correct!
-Question: 7
-Your answer: no
-Correct!
-Congratulations, Sam!
-```
-2. Calculator
-
-TODO: add asciinema demo for the brain-calc
-<!-- Добавьте в README.md аскинему с запуском и демонстрацией различных исходов игры. -->
+[![asciicast](https://asciinema.org/a/xSnFP4siV8kJWi5MJFKNoqEJw.svg)](https://asciinema.org/a/xSnFP4siV8kJWi5MJFKNoqEJw)
+### Calculator
+[![asciicast](https://asciinema.org/a/HBtsAqZK5f15wPpfT7nGIjsbJ.svg)](https://asciinema.org/a/HBtsAqZK5f15wPpfT7nGIjsbJ)
