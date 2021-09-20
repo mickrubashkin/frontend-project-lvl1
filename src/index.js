@@ -15,7 +15,7 @@ const RULES = [
 ];
 const GAMES = [even, calc, gcd, progression, prime];
 
-const checkGuess = (guess, answer) => guess == answer;
+const checkGuess = (guess, answer) => +guess === +answer;
 
 const game = (gameIndex) => () => {
   // Greet and get player name
