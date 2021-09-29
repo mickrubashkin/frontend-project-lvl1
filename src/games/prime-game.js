@@ -23,4 +23,4 @@ const generateQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-export const playGamePrime = () => gameLoop(gameRules, generateQuestionAndAnswer);
+export default () => gameLoop(gameRules, generateQuestionAndAnswer);

@@ -11,4 +11,4 @@ const generateQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-export const playGameEven = () => gameLoop(gameRules, generateQuestionAndAnswer);
+export default () => gameLoop(gameRules, generateQuestionAndAnswer);

@@ -1,5 +1,5 @@
-export { playGameEven } from './games/even-game.js';
-export { playGameCalc } from './games/calc-game.js';
-export { playGameGcd } from './games/gcd-game.js';
-export { playGamePrime } from './games/prime-game.js';
-export { playGameProgression } from './games/progression-game.js';
+export { default as playGameEven } from './games/even-game.js';
+export { default as playGameCalc } from './games/calc-game.js';
+export { default as playGameGcd } from './games/gcd-game.js';
+export { default as playGamePrime } from './games/prime-game.js';
+export { default as playGameProgression } from './games/progression-game.js';

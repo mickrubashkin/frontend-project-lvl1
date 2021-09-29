@@ -12,4 +12,4 @@ const generateQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-export const playGameGcd = () => gameLoop(gameRules, generateQuestionAndAnswer);
+export default () => gameLoop(gameRules, generateQuestionAndAnswer);

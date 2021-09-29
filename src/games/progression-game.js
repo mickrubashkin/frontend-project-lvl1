@@ -25,4 +25,4 @@ const generateQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-export const playGameProgression = () => gameLoop(rules, generateQuestionAndAnswer);
+export default () => gameLoop(rules, generateQuestionAndAnswer);
