@@ -2,7 +2,7 @@ export const generateRandomInteger = (min, max) => (
   Math.floor(Math.random() * (max + 1 - min) + min)
 );
 
-export const gcd = (a, b) => {
+export const getGcd = (a, b) => {
   // Euclidean algorithm
   // https://en.wikipedia.org/wiki/Greatest_common_divisor
 
@@ -13,7 +13,7 @@ export const gcd = (a, b) => {
     return big;
   }
 
-  return gcd(small, big % small);
+  return getGcd(small, big % small);
 };
 
 export const getRandomNumber = () => generateRandomInteger(1, 100);
