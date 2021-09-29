@@ -1,16 +1,26 @@
-import readlineSync from 'readline-sync';
-import { getRandomNumber, isPrime } from '../utils.js';
+import { getRandomNumber } from '../utils.js';
+import gameLoop from '../game-loop.js';
 
-export default () => {
-  // Generate random number
-  const num = getRandomNumber(2, 101);
+const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  // Calculate correct answer
-  const answer = isPrime(num) ? 'yes' : 'no';
-  // Ask question
-  console.log(`Question: ${num}`);
-  // Prompt player to answer
-  const guess = readlineSync.question('Your answer: ');
+const isPrime = (num) => {
+  const PRIMES_TO_101 = [
+    2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
+    31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+    73, 79, 83, 89, 97, 101,
+  ];
 
-  return [guess, answer];
+  return PRIMES_TO_101.includes(num);
 };
+// FIXME_03: Hardcoding
+// Это хардкодинг.
+// Давай попробуем реализовать эту функцию для любого числа
+
+const generateQuestionAndAnswer = () => {
+  const question = getRandomNumber();
+  const answer = isPrime(question) ? 'yes' : 'no';
+
+  return [question, answer];
+};
+
+export const playGamePrime = () => gameLoop(gameRules, generateQuestionAndAnswer);

@@ -1,10 +1,13 @@
-import readlineSync from 'readline-sync';
-import { getRandomNumber } from '../utils.js';
+import { generateRandomInteger } from '../utils.js';
+import gameLoop from '../game-loop.js';
 
-export default () => {
-  const start = getRandomNumber(1, 20);
-  const step = getRandomNumber(1, 9);
-  const len = getRandomNumber(5, 10);
+const rules = 'What number is missing in the progression?';
+
+const generateQuestionAndAnswer = () => {
+  const start = generateRandomInteger(1, 20);
+  const step = generateRandomInteger(1, 9);
+  const len = generateRandomInteger(5, 10);
+
   const progression = [];
 
   for (let i = 0; i < len; i += 1) {
@@ -12,17 +15,14 @@ export default () => {
     progression.push(next);
   }
 
-  const hiddenPosition = getRandomNumber(0, len - 1);
+  const hiddenPosition = generateRandomInteger(0, len - 1);
   const answer = progression[hiddenPosition];
 
   const hidden = [...progression];
   hidden[hiddenPosition] = '..';
   const question = hidden.join(' ');
 
-  // Ask question
-  console.log(`Question: ${question}`);
-  // Prompt player to answer
-  const guess = readlineSync.question('Your answer: ');
-
-  return [guess, answer];
+  return [question, answer];
 };
+
+export const playGameProgression = () => gameLoop(rules, generateQuestionAndAnswer);

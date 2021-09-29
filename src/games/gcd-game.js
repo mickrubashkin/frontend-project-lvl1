@@ -1,16 +1,15 @@
-import readlineSync from 'readline-sync';
 import { gcd, getRandomNumber } from '../utils.js';
+import gameLoop from '../game-loop.js';
 
-export default () => {
-  // Generate random numbers
-  const num1 = getRandomNumber(1, 100);
-  const num2 = getRandomNumber(1, 100);
-  // Calculate correct answer
+const gameRules = 'Find the greatest common divisor of given numbers.';
+
+const generateQuestionAndAnswer = () => {
+  const num1 = getRandomNumber();
+  const num2 = getRandomNumber();
   const answer = gcd(num1, num2);
-  // Ask question
-  console.log(`Question: ${num1} ${num2}`);
-  // Prompt player to answer
-  const guess = readlineSync.question('Your answer: ');
+  const question = `${num1} ${num2}`;
 
-  return [guess, answer];
+  return [question, answer];
 };
+
+export const playGameGcd = () => gameLoop(gameRules, generateQuestionAndAnswer);

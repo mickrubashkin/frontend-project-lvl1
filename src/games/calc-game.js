@@ -1,27 +1,22 @@
-import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../utils.js';
+import gameLoop from '../game-loop.js';
 
 const OPERATORS = ['+', '-', '*'];
 
+const gameRules = 'What is the result of the expression?';
+
 const getRandomOperator = () => {
-  const randomIndex = getRandomNumber(0, OPERATORS.length - 1);
+  const randomIndex = Math.floor(Math.random() * OPERATORS.length);
 
   return OPERATORS[randomIndex];
 };
 
 const generateExpression = () => {
   const operator = getRandomOperator();
-  const max = operator === '*' ? 20 : 100;
-
-  const operand1 = getRandomNumber(1, max);
-  const operand2 = getRandomNumber(1, max);
+  const operand1 = getRandomNumber();
+  const operand2 = getRandomNumber();
 
   return [operand1, operator, operand2];
-};
-
-const expressionToString = (expression) => {
-  const [operand1, operator, operand2] = expression;
-  return `${operand1.toString()} ${operator} ${operand2.toString()}`;
 };
 
 const calculateExpression = (expression) => {
@@ -43,14 +38,12 @@ const calculateExpression = (expression) => {
   return answer;
 };
 
-export default () => {
+const generateQuestionAndAnswer = () => {
   const expression = generateExpression();
-  const question = expressionToString(expression);
+  const question = expression.join(' ');
   const answer = calculateExpression(expression);
 
-  console.log(`Question: ${question}`);
-
-  const guess = readlineSync.question('Your answer: ');
-
-  return [guess, answer];
+  return [question, answer];
 };
+
+export const playGameCalc = () => gameLoop(gameRules, generateQuestionAndAnswer);
