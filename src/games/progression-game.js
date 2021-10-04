@@ -1,12 +1,12 @@
-import { generateRandomInteger } from '../utils.js';
-import gameLoop from '../game-loop.js';
+import getRandomInteger from '../utils.js';
+import playGame from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
-const generateQuestionAndAnswer = () => {
-  const start = generateRandomInteger(1, 20);
-  const step = generateRandomInteger(1, 9);
-  const len = generateRandomInteger(5, 10);
+const getGameData = () => {
+  const start = getRandomInteger(1, 20);
+  const step = getRandomInteger(1, 9);
+  const len = getRandomInteger(5, 10);
 
   const progression = [];
 
@@ -15,7 +15,7 @@ const generateQuestionAndAnswer = () => {
     progression.push(next);
   }
 
-  const hiddenPosition = generateRandomInteger(0, len - 1);
+  const hiddenPosition = getRandomInteger(0, len - 1);
   const answer = progression[hiddenPosition];
 
   const hidden = [...progression];
@@ -25,4 +25,4 @@ const generateQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-export default () => gameLoop(rules, generateQuestionAndAnswer);
+export default () => playGame(rules, getGameData);

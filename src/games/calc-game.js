@@ -1,20 +1,21 @@
-import { getRandomNumber } from '../utils.js';
-import gameLoop from '../game-loop.js';
+import getRandomInteger from '../utils.js';
+import playGame from '../index.js';
 
 const OPERATORS = ['+', '-', '*'];
 
-const gameRules = 'What is the result of the expression?';
+const rules = 'What is the result of the expression?';
 
 const getRandomOperator = () => {
-  const randomIndex = Math.floor(Math.random() * OPERATORS.length);
+  // const randomIndex = Math.floor(Math.random() * OPERATORS.length);
+  const randomIndex = getRandomInteger(0, OPERATORS.length - 1);
 
   return OPERATORS[randomIndex];
 };
 
 const generateExpression = () => {
   const operator = getRandomOperator();
-  const operand1 = getRandomNumber();
-  const operand2 = getRandomNumber();
+  const operand1 = getRandomInteger(1, 100);
+  const operand2 = getRandomInteger(1, 100);
 
   return [operand1, operator, operand2];
 };
@@ -38,7 +39,7 @@ const calculateExpression = (expression) => {
   return answer;
 };
 
-const generateQuestionAndAnswer = () => {
+const getGameData = () => {
   const expression = generateExpression();
   const question = expression.join(' ');
   const answer = calculateExpression(expression);
@@ -46,4 +47,4 @@ const generateQuestionAndAnswer = () => {
   return [question, answer];
 };
 
-export default () => gameLoop(gameRules, generateQuestionAndAnswer);
+export default () => playGame(rules, getGameData);

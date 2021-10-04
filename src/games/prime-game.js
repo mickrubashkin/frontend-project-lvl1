@@ -1,7 +1,7 @@
-import { getRandomNumber } from '../utils.js';
-import gameLoop from '../game-loop.js';
+import getRandomInteger from '../utils.js';
+import playGame from '../index.js';
 
-const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -17,12 +17,12 @@ const isPrime = (num) => {
   return true;
 };
 
-const generateQuestionAndAnswer = () => {
-  const num = getRandomNumber();
+const getGameData = () => {
+  const num = getRandomInteger(1, 100);
   const question = `${num}`;
   const answer = isPrime(num) ? 'yes' : 'no';
 
   return [question, answer];
 };
 
-export default () => gameLoop(gameRules, generateQuestionAndAnswer);
+export default () => playGame(rules, getGameData);
