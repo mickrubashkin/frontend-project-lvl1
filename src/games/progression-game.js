@@ -6,7 +6,8 @@ const rules = 'What number is missing in the progression?';
 const getGameData = () => {
   const start = getRandomInteger(1, 20);
   const step = getRandomInteger(1, 9);
-  const len = getRandomInteger(5, 10);
+  // const len = getRandomInteger(5, 10);
+  const len = 5;
 
   const progression = [];
 
