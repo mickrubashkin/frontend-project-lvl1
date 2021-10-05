@@ -29,7 +29,7 @@ export default (rules, getData) => {
 
   if (gameState === 'gameEnd') {
     console.log(`Let's try again, ${player}!`);
+  } else {
+    console.log(`Congratulations, ${player}!`);
   }
-
-  console.log(`Congratulations, ${player}!`);
 };
