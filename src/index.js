@@ -1,35 +1,41 @@
 import readlineSync from 'readline-sync';
-import getName from './cli.js';
+import { greetByName } from './cli.js';
 
-const checkGuess = (guess, answer) => `${guess}` === `${answer}`;
+const NUMBER_OF_ROUNDS = 3;
 
-export default (rules, getData) => {
-  // Greet and get player name
-  const player = getName();
+const checkGuess = (guess, answer) => {
+  const normalizedGuess = String(guess);
+  const normalizedAnswer = String(answer);
 
-  // Tell the rules
+  return normalizedGuess === normalizedAnswer;
+};
+
+export default (rules, generateRoundData) => {
+  let isPlayerLose = false;
+  let playerName = '';
+
+  console.log('Welcome to the Brain Games!');
+  playerName = readlineSync.question('May I have your name? ');
+  greetByName(playerName);
   console.log(rules);
 
-  let roundsPlayed = 0;
-  let gameState = 'playing';
-
-  do {
-    const [question, answer] = getData();
+  for (let i = 0; i < NUMBER_OF_ROUNDS; i += 1) {
+    const [question, answer] = generateRoundData();
     console.log(`Question: ${question}`);
     const guess = readlineSync.question('Your answer: ');
 
     if (checkGuess(guess, answer)) {
       console.log('Correct!');
-      roundsPlayed += 1;
     } else {
-      gameState = 'gameEnd';
+      isPlayerLose = true;
       console.log(`'${guess}' is wrong answer ;(. Correct answer was '${answer}'.`);
+      break;
     }
-  } while (roundsPlayed < 3 && gameState === 'playing');
+  }
 
-  if (gameState === 'gameEnd') {
-    console.log(`Let's try again, ${player}!`);
+  if (isPlayerLose) {
+    console.log(`Let's try again, ${playerName}!`);
   } else {
-    console.log(`Congratulations, ${player}!`);
+    console.log(`Congratulations, ${playerName}!`);
   }
 };
