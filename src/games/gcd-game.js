@@ -3,13 +3,7 @@ import playGame from '../index.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
 
-const getGcd = (a, b) => b === 0 ? a : getGcd(b, a % b);
-
-// function gcd(a, b)
-// if b = 0
-//         return a
-// else
-//   return gcd(b, a mod b)
+const getGcd = (a, b) => (b === 0 ? a : getGcd(b, a % b));
 
 const generateRoundData = () => {
   const num1 = getRandomInteger(1, 100);
