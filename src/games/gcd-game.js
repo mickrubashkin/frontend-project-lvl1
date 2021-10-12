@@ -9,7 +9,7 @@ const generateRoundData = () => {
   const num1 = generateRandomNumber(1, 100);
   const num2 = generateRandomNumber(1, 100);
   const question = `${num1} ${num2}`;
-  const answer = getGcd(num1, num2);
+  const answer = String(getGcd(num1, num2));
 
   return [question, answer];
 };
