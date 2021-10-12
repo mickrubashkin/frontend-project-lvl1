@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const roundsCount = 3;
 
-const checkGuess = (guess, answer) => guess == answer;
+const checkGuess = (guess, answer) => guess === answer;
 
 export default (rules, generateRoundData) => {
   console.log('Welcome to the Brain Games!');

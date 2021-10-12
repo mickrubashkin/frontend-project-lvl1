@@ -33,7 +33,7 @@ const generateRoundData = () => {
   const operand2 = generateRandomNumber(1, 100);
 
   const question = `${operand1} ${operator} ${operand2}`;
-  const answer = calculateExpression([operand1, operator, operand2]);
+  const answer = String(calculateExpression([operand1, operator, operand2]));
 
   return [question, answer];
 };

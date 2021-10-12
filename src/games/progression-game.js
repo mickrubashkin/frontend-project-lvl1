@@ -21,7 +21,7 @@ const generateRoundData = () => {
   const firstItem = generateRandomNumber(1, 20);
   const diff = generateRandomNumber(1, 9);
   const hiddenItemIndex = generateRandomNumber(0, progressionLength - 1);
-  const answer = firstItem + diff * hiddenItemIndex;
+  const answer = String(firstItem + diff * hiddenItemIndex);
   const question = generateQuestion(firstItem, diff, hiddenItemIndex);
 
   return [question, answer];
