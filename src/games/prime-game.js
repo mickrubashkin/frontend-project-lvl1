@@ -1,4 +1,4 @@
-import { getRandomInteger } from '../utils.js';
+import { generateRandomNumber } from '../utils.js';
 import playGame from '../index.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -18,7 +18,7 @@ const isPrime = (num) => {
 };
 
 const generateRoundData = () => {
-  const question = getRandomInteger(1, 100);
+  const question = generateRandomNumber(1, 100);
   const answer = isPrime(question) ? 'yes' : 'no';
 
   return [question, answer];
