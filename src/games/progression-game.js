@@ -8,11 +8,9 @@ const generateQuestion = (firstItem, diff, hiddenItemIndex) => {
   const progression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    const next = firstItem + i * diff;
+    const next = i === hiddenItemIndex ? '..' : firstItem + i * diff;
     progression.push(next);
   }
-
-  progression[hiddenItemIndex] = '..';
 
   return progression.join(' ');
 };
