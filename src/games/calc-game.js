@@ -7,6 +7,8 @@ const operators = ['+', '-', '*'];
 const calculateExpression = (expression) => {
   const [operand1, operator, operand2] = expression;
   let answer;
+  // TODO 2
+  // Можно избавиться от перезаписи переменной.
 
   switch (operator) {
     case '+':
@@ -26,7 +28,7 @@ const calculateExpression = (expression) => {
 };
 
 const generateRoundData = () => {
-  const randomIndex = generateRandomNumber(0, operators.length - 1);
+  const randomOperatorIndex = generateRandomNumber(0, operators.length - 1);
 
   const operator = operators[randomIndex];
   const operand1 = generateRandomNumber(1, 100);
